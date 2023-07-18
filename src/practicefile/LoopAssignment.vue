@@ -4,6 +4,10 @@ import { countries } from "./data/country";
 //only get the country which first charater start with 'B'
 const countryList = countries.filter((country) => country.country[0] === "B");
 
+// const countryList = countries.filter((country) =>
+//   country.country[0].match(/B/)
+// );
+
 //annomous function
 /** function getCountryList() {
   return countries.filter(function (country) {
