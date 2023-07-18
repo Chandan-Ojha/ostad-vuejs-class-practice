@@ -55,6 +55,15 @@ function getTasksInProgress() {
       >
         {{ task.id }}. {{ task.title }}
       </div>
+      <h2>Pending</h2>
+      <div
+        class="p-5 border border-gray-600 text-left"
+        v-for="(task, index) in tasks"
+        v-show="'Pending' == task.status"
+        :key="index"
+      >
+        {{ task.id }}. {{ task.title }}
+      </div>
     </section>
   </section>
 </template>
