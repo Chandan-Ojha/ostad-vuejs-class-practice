@@ -1,6 +1,6 @@
 //two way data binding and v-model
 <script setup>
-import { ref } from 'vue'
+import { ref,computed } from 'vue'
 const color = ref('None')
 
 function getStyle() {
@@ -8,6 +8,13 @@ function getStyle() {
     backgroundColor: color.value,
   }
 }
+
+// const style = computed(() => {
+//   return {
+//     backgroundColor: color.value,
+//   }
+// })
+
 </script>
 
 <template>
