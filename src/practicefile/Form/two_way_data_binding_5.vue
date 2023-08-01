@@ -3,6 +3,10 @@
 <script setup>
 import { ref, reactive } from "vue";
 const favColors = ref([]);
+
+// function addMore() {
+//   favColors.value.push("");
+// }
 </script>
 
 <template>
@@ -34,6 +38,18 @@ const favColors = ref([]);
       v-model="favColors"
       value="blue"
     />
+    <!-- <div class="flex flex-col">
+      <input
+        class="m-2"
+        type="text"
+        v-model="favColors[n]"
+        v-for="n in favColors.length + 1"
+        :key="n"
+      />
+    </div>
+    <button @click="addMore()" class="mt-10 bg-blue-500 text-white p-2 rounded">
+      Add More Color
+    </button> -->
   </section>
 </template>
 
