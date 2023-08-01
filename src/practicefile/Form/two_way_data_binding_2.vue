@@ -3,9 +3,10 @@
 import { ref, reactive } from "vue";
 
 const person = reactive({
-  name: "John Doe",
-  age: 30,
-  job: "Web Developer",
+  name: { value: "John Doe", type: "text" },
+  age: { value: 30, type: "number" },
+  job: { value: "Web Developer", type: "text" },
+  email: { value: "john@gmail.com", type: "email" },
 });
 </script>
 
@@ -32,9 +33,9 @@ const person = reactive({
     >
       <label for="name">{{ key }}</label>
       <input
-        type="text"
+        :type="person[key].type"
         class="border border-gray-300 rounded-md p-2"
-        v-model="person[key]"
+        v-model="person[key].value"
       />
     </div>
   </section>
