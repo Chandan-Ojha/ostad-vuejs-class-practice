@@ -1,11 +1,15 @@
 <script setup>
-import { ref } from 'vue'
+import { ref, onUpdated } from "vue";
 
 defineProps({
   msg: String,
-})
+});
 
-const count = ref(0)
+onUpdated(() => {
+  console.log("HelloWorld.vue updated");
+});
+
+const count = ref(0);
 </script>
 
 <template>
