@@ -1,5 +1,6 @@
 import "bootstrap";
 import "bootstrap/dist/css/bootstrap.css";
+import "vue-toast-notification/dist/theme-sugar.css";
 
 import { createApp } from "vue";
 import App from "./App.vue";
