@@ -2,6 +2,7 @@
 import { ref } from "vue";
 import axios from "axios";
 import { useToast } from "vue-toast-notification";
+import { baseUrl } from "../config/config";
 
 //get product id from url
 let parmas = new URLSearchParams(window.location.search);
@@ -12,7 +13,7 @@ if (id !== null) {
 
 //get existing product data
 async function getExistingProductData(id) {
-  let url = "https://crud.teamrabbil.com/api/v1/ReadProductByID/" + id;
+  let url = baseUrl + "/ReadProductByID/" + id;
   let res = await axios.get(url);
   if (200 === res.status && "success" === res.data["status"]) {
     productData.value = res.data["data"][0];
@@ -48,11 +49,11 @@ async function createProduct() {
     useToast().error("Unit Price is required");
   } else {
     //create product
-    let url = "https://crud.teamrabbil.com/api/v1/CreateProduct";
+    let url = baseUrl + "/CreateProduct";
 
     //update product
     if (id !== null) {
-      url = "https://crud.teamrabbil.com/api/v1/UpdateProduct/" + id;
+      url = baseUrl + "/UpdateProduct/" + id;
     }
 
     //send request
