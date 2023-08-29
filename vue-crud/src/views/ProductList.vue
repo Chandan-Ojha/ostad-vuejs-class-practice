@@ -2,6 +2,7 @@
 import { ref } from "vue";
 import axios from "axios";
 import { useToast } from "vue-toast-notification";
+import { baseUrl } from "../config/config";
 
 const toast = useToast();
 
@@ -9,7 +10,7 @@ const productList = ref([]);
 
 //get product list
 async function getProductList() {
-  let url = "https://crud.teamrabbil.com/api/v1/ReadProduct";
+  let url = baseUrl + "/ReadProduct";
   let res = await axios.get(url);
   productList.value = res.data["data"];
 }
@@ -17,7 +18,7 @@ getProductList();
 
 //delete product
 async function deleteProduct(id) {
-  let url = "https://crud.teamrabbil.com/api/v1/DeleteProduct/" + id;
+  let url = baseUrl + "/DeleteProduct/" + id;
   let res = await axios.get(url);
   if (200 === res.status && "success" === res.data["status"]) {
     toast.info("Product deleted successfully");
