@@ -1,5 +1,7 @@
 <script setup>
-import HelloWorld from './components/HelloWorld.vue'
+import HelloWorld from "./components/HelloWorld.vue";
+import { counterStore } from "./store/store";
+const counter = counterStore();
 </script>
 
 <template>
@@ -11,6 +13,7 @@ import HelloWorld from './components/HelloWorld.vue'
       <img src="./assets/vue.svg" class="logo vue" alt="Vue logo" />
     </a>
   </div>
+  <h3>{{ counter.doubleCount }}</h3>
   <HelloWorld msg="Vite + Vue" />
 </template>
 
