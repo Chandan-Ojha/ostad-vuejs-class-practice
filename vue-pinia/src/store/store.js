@@ -1,6 +1,6 @@
 import { defineStore } from "pinia";
 
-const counterStore = defineStore({
+/*const counterStore = defineStore({
   id: "counter",
   state: () => ({
     count: 16,
@@ -16,6 +16,6 @@ const counterStore = defineStore({
       this.count++;
     },
   },
-});
+});*/
 
 export { counterStore };
