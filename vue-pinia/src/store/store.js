@@ -1,4 +1,7 @@
 import { defineStore } from "pinia";
+import { ref, reactive, computed } from "vue";
+
+//step 1 : options api style setup
 
 /*const counterStore = defineStore({
   id: "counter",
@@ -17,5 +20,18 @@ import { defineStore } from "pinia";
     },
   },
 });*/
+
+//step 2 : composition api style setup
+
+const counterStore = defineStore("counter", () => {
+  const count = ref(16);
+  const doubleCount = computed(() => count.value * 2);
+  const increment = () => count.value++;
+  return {
+    count,
+    doubleCount,
+    increment,
+  };
+});
 
 export { counterStore };
