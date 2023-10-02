@@ -1,0 +1,8 @@
+//bootstrap installation setup in vue js 3
+1) https://stackoverflow.com/questions/65547199/using-bootstrap-5-with-vue-3
+
+//csv to json converter library
+2) https://www.npmjs.com/package/csvtojson
+
+//xlsx to json converter library
+3) https://www.npmjs.com/package/xlsx
