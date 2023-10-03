@@ -27,6 +27,34 @@ const NavOpenClose = () => {
         <a id="MenuBar" @click="NavOpenClose" class="icon-nav mx-0 my-1 h5">
           <i class="fa text-white fa-bars"></i>
         </a>
+        <div class="d-flex">
+          <div class="dropdown">
+            <a
+              class="dropdown-toggle text-white"
+              href="#"
+              role="button"
+              id="dropdownMenuLink"
+              data-bs-toggle="dropdown"
+              aria-expanded="false"
+            >
+              <i class="fa text-white fa-user-circle fa-2x"></i>
+            </a>
+            <ul
+              class="dropdown-menu dropdown-menu-end"
+              aria-labelledby="dropdownMenuLink"
+            >
+              <li>
+                <a class="dropdown-item" href="#">Profile</a>
+              </li>
+              <li>
+                <a class="dropdown-item" href="#">Settings</a>
+              </li>
+              <li>
+                <a class="dropdown-item" href="#">Logout</a>
+              </li>
+            </ul>
+          </div>
+        </div>
       </div>
     </nav>
 
