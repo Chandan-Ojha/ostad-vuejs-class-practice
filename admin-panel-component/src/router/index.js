@@ -13,6 +13,11 @@ const router = createRouter({
       name: "toast",
       component: () => import("../views/ToastView.vue"),
     },
+    {
+      path: "/chart",
+      name: "chart",
+      component: () => import("../views/ChartView.vue"),
+    },
   ],
 });
 
