@@ -8,6 +8,11 @@ const router = createRouter({
       name: "home",
       component: () => import("../views/TableView.vue"),
     },
+    {
+      path: "/toast",
+      name: "toast",
+      component: () => import("../views/ToastView.vue"),
+    },
   ],
 });
 
