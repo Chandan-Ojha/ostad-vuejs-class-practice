@@ -18,6 +18,21 @@ const router = createRouter({
       name: "chart",
       component: () => import("../views/ChartView.vue"),
     },
+    {
+      path: "/rich-text",
+      name: "rich-text",
+      component: () => import("../views/RichTextView.vue"),
+    },
+    {
+      path: "/loader",
+      name: "loader",
+      component: () => import("../views/ContentLoaderView.vue"),
+    },
+    {
+      path: "/circle-progress",
+      name: "circle-progress",
+      component: () => import("../views/CircleProgressView.vue"),
+    },
   ],
 });
 
