@@ -14,12 +14,8 @@ const Header = [
   { text: "WEIGHT (lbs)", value: "indicator.weight", sortable: true },
   { text: "LAST ATTENDED", value: "lastAttended", width: 200 },
   { text: "COUNTRY", value: "country" },
-  { text: "NUMBER", value: "number" },
+  { text: "OPERATION", value: "operation" },
 ];
-
-const itemClick = (number, player) => {
-  alert(`Number is=${number} & Player Name is=${player}`);
-};
 </script>
 <template>
   <div class="container-fluid">
@@ -43,13 +39,15 @@ const itemClick = (number, player) => {
                 :search-field="searchField"
                 :search-value="searchValue"
               >
-                <template #item-number="{ number, player }">
-                  <button
-                    class="btn btn-success btn-sm"
-                    @click="itemClick(number, player)"
-                  >
-                    Delete
-                  </button>
+                <template #item-operation="item">
+                  <div class="operation-wrapper">
+                    <button class="btn btn-sm btn-white">
+                      <i class="fa fa-edit"></i>
+                    </button>
+                    <button class="btn btn-sm btn-white">
+                      <i class="fa fa-trash"></i>
+                    </button>
+                  </div>
                 </template>
               </EasyDataTable>
             </div>
