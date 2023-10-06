@@ -1,7 +1,7 @@
 <script setup>
-import Fruits3 from "./components/Fruits3.vue";
+import FruitsWatch from "./components/FruitsWatch.vue";
 </script>
 
 <template>
-  <Fruits3 />
+  <FruitsWatch />
 </template>
