@@ -1,7 +1,7 @@
 <script setup>
-import FruitsWatch from "./components/FruitsWatch.vue";
+import PostWatchEffect from "./components/PostWatchEffect.vue";
 </script>
 
 <template>
-  <FruitsWatch />
+  <PostWatchEffect />
 </template>
