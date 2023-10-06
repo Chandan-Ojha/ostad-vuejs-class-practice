@@ -1,7 +1,7 @@
 <script setup>
-import Fruits2 from "./components/Fruits2.vue";
+import Fruits3 from "./components/Fruits3.vue";
 </script>
 
 <template>
-  <Fruits2 />
+  <Fruits3 />
 </template>
