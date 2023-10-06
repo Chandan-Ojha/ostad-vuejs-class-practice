@@ -1,5 +1,7 @@
-<script setup></script>
+<script setup>
+import Fruits2 from "./components/Fruits2.vue";
+</script>
 
-<template></template>
-
-<style scoped></style>
+<template>
+  <Fruits2 />
+</template>
