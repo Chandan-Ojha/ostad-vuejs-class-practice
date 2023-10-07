@@ -6,7 +6,7 @@ const data = [
       "https://images.unsplash.com/photo-1615319532762-b4ccc69e5abf?ixid=MXwxMjA3fDB8MHxzZWFyY2h8MTA3fHxsYW5kc2NhcGV8ZW58MHx8MHw%3D&amp;ixlib=rb-1.2.1&amp;auto=format&amp;fit=crop&amp;w=900&amp;q=100",
     location: "California",
     price: 87,
-    rating: 4,
+    rating: 3,
     time: 15,
     title: "Photo by Drew Dao",
   },
