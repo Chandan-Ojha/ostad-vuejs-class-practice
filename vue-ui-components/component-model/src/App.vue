@@ -6,6 +6,7 @@ import SingleItemY from "./components/SingleItemY.vue";
 import MultipleItem from "./components/MultipleItem.vue";
 import ButtonItem from "./components/ButtonItem.vue";
 import NameComponent from "./components/NameComponent.vue";
+import CheckBox from "./components/CheckBox.vue";
 
 const person = reactive({
   name: "John Doe",
@@ -14,6 +15,8 @@ const person = reactive({
 });
 
 // const name = ref("Jane Doe");
+
+const taskDone = ref(true);
 </script>
 
 <template>
@@ -46,11 +49,14 @@ const person = reactive({
       <h1 class="text-2xl">Component Model</h1>
     </div>
 
-    <div class="mt-10">Original Name: {{ person.name }}<br /></div>
+    <div class="mt-10">
+      Original Name: {{ person.name }}<br />
+      Task Done: {{ taskDone }}
+    </div>
 
     <div class="mt-10">
       <label>Component</label><br /><br />
-      <NameComponent v-model="person.name" />
+      <CheckBox v-model="taskDone" label="Completed this episode" />
     </div>
   </div>
 </template>
