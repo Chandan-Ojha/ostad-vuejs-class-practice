@@ -7,6 +7,7 @@ import MultipleItem from "./components/MultipleItem.vue";
 import ButtonItem from "./components/ButtonItem.vue";
 import NameComponent from "./components/NameComponent.vue";
 import CheckBox from "./components/CheckBox.vue";
+import Radio from "./components/Radio.vue";
 
 const person = reactive({
   name: "John Doe",
@@ -17,6 +18,7 @@ const person = reactive({
 // const name = ref("Jane Doe");
 
 const taskDone = ref(true);
+const fruit = ref("Apple");
 </script>
 
 <template>
@@ -49,7 +51,8 @@ const taskDone = ref(true);
       <h1 class="text-2xl">Component Model</h1>
     </div>
 
-    <div class="mt-10">
+    <!-- for checkbox component -->
+    <!-- <div class="mt-10">
       Original Name: {{ person.name }}<br />
       Task Done: {{ taskDone }}
     </div>
@@ -57,6 +60,19 @@ const taskDone = ref(true);
     <div class="mt-10">
       <label>Component</label><br /><br />
       <CheckBox v-model="taskDone" label="Completed this episode" />
+    </div> -->
+
+    <!-- for radion button component -->
+    <div class="mt-10">Fruit: {{ fruit }}</div>
+
+    <div class="mt-10">
+      <label>Component</label><br />
+      <p class="mt-5">
+        <label> Your favorite fruit</label> <br />
+        <Radio v-model="fruit" label="Apple" value="apple" />
+        <Radio v-model="fruit" label="Banana" value="banana" />
+        <Radio v-model="fruit" label="Orange" value="orange" />
+      </p>
     </div>
   </div>
 </template>
