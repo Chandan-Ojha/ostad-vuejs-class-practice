@@ -1,1 +1,1 @@
-<p align="center">Vue + Inertia + Laravel</p>
+<p align="center"><b>Vue + Inertia + Laravel</b></p>
