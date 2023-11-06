@@ -14,12 +14,22 @@ class SiteController extends Controller
 
     public function Page1()
     {
-        return Inertia::render('Page1');
+        $json = [
+            'name' => 'John Doe',
+            'age' => 25,
+            'city' => 'New York',
+        ];
+        return Inertia::render('Page1',[
+            'data' => $json,
+        ]);
     }
 
     public function Page2()
     {
-        return Inertia::render('Page2');
+        $meta = [
+            'title' => 'This is page 2',
+        ];
+        return Inertia::render('Page2')->withViewData(['meta' => $meta]);
     }
 
     public function Page3()
