@@ -12,6 +12,7 @@ class SiteController extends Controller
         return Inertia::render('index');
     }
 
+    //data passing to vue component
     public function Page1()
     {
         $json = [

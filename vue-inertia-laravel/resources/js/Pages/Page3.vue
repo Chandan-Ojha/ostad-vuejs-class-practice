@@ -1,5 +1,6 @@
 <script setup>
 import NavBar from "@/Component/NavBar.vue";
+document.title = "Page 3";
 </script>
 
 <template>

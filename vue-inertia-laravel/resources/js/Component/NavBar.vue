@@ -5,7 +5,7 @@ import { Link } from "@inertiajs/vue3";
 <template>
     <nav class="navbar navbar-expand-lg navbar-custom">
         <div class="container">
-            <Link class="navbar-brand" href="/">Vue + Laravel</Link>
+            <Link class="navbar-brand" href="/">Laravel-Vue</Link>
             <button
                 class="navbar-toggler"
                 type="button"

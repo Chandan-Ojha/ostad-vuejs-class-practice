@@ -2,6 +2,7 @@
 import NavBar from "@/Component/NavBar.vue";
 import Child1 from "@/Component/Child1.vue";
 const props = defineProps({ data: Object });
+document.title = "Page 1";
 </script>
 
 <template>
