@@ -25,7 +25,7 @@ class SiteController extends Controller
         ]);
     }
 
-    //meta tag
+    //meta data passing to app.blade.php
     public function Page2()
     {
         $meta = [
@@ -34,9 +34,15 @@ class SiteController extends Controller
         return Inertia::render('Page2')->withViewData(['meta' => $meta]);
     }
 
+    //shared data passing to all pages
     public function Page3()
     {
-        return Inertia::render('Page3');
+        $shared_data = [
+            'message' => 'This is page 3',
+            'status' => 'success',
+            'shared_data' => 'This is my shared data',
+        ];
+        return Inertia::render('Page3')->with($shared_data);
     }
 
     public function Page4()
@@ -44,8 +50,27 @@ class SiteController extends Controller
         return Inertia::render('Page4');
     }
 
+    //post back request
+    public function PostBackRequest(Request $request)
+    {
+        $json = $request->input();
+
+        $data = [
+            'message' => 'Submit Success !',
+            'status' => true,
+            'shared_data' => $json,
+        ];
+
+        return redirect()->route('Page4')->with($data);
+    }
+
+    //meta data passing to vue component
     public function Page5()
     {
-        return Inertia::render('Page5');
+        $meta=[
+            'title' => 'Page 5',
+            'description'=>"description"
+        ];
+        return Inertia::render('Page5',['meta'=>$meta]);
     }
 }

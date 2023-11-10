@@ -8,11 +8,15 @@ document.title = "Page 1";
 <template>
     <NavBar />
     <div class="container">
-        <h3 class="text-center mt-5">Page 1</h3>
+        <h4 class="text-center mt-5">
+            Data passing controller to vue component
+        </h4>
+
         <h6>This Data from Page1</h6>
         <p>Name: {{ props.data.name }}</p>
         <p>Age: {{ props.data.age }}</p>
         <p>City: {{ props.data.city }}</p>
+        <br />
         <h6>This Data from Child1</h6>
         <Child1 :data="props.data" />
     </div>

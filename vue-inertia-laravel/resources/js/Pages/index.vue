@@ -6,7 +6,7 @@ document.title = "Home";
 <template>
     <NavBar />
     <div class="container">
-        <h1>Home</h1>
+        <h3 class="text-center mt-5">Home</h3>
     </div>
 </template>
 
