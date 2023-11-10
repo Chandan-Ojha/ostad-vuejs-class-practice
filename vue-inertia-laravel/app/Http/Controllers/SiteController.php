@@ -25,6 +25,7 @@ class SiteController extends Controller
         ]);
     }
 
+    //meta tag
     public function Page2()
     {
         $meta = [
