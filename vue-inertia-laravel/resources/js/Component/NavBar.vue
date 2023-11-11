@@ -3,7 +3,7 @@ import { Link } from "@inertiajs/vue3";
 </script>
 
 <template>
-    <nav class="navbar navbar-expand-lg navbar-custom">
+    <nav class="navbar navbar-expand-lg navbar-custom sticky-top">
         <div class="container">
             <Link class="navbar-brand" href="/">Laravel-Inertia-Vue</Link>
             <button
@@ -36,6 +36,31 @@ import { Link } from "@inertiajs/vue3";
                     </li>
                     <li class="nav-item">
                         <Link class="nav-link" href="/Page5">Page5</Link>
+                    </li>
+                    <li class="nav-item">
+                        <Link class="nav-link" href="/Page6">Page6</Link>
+                    </li>
+                    <li class="nav-item">
+                        <Link class="nav-link" href="/Page7">Page7</Link>
+                    </li>
+                    <li class="nav-item">
+                        <Link class="nav-link" href="/Page8">Page8</Link>
+                    </li>
+                    <li class="nav-item">
+                        <Link class="nav-link" href="/Page9" preserve-scroll>
+                            Page9
+                        </Link>
+                    </li>
+                    <li class="nav-item">
+                        <Link class="nav-link" href="/Page10" preserve-scroll>
+                            Page10
+                        </Link>
+                    </li>
+                    <li class="nav-item">
+                        <Link class="nav-link" href="/Page11">Page11</Link>
+                    </li>
+                    <li class="nav-item">
+                        <Link class="nav-link" href="/Page12">Page12</Link>
                     </li>
                 </ul>
             </div>

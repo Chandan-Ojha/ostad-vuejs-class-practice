@@ -73,4 +73,39 @@ class SiteController extends Controller
         ];
         return Inertia::render('Page5',['meta'=>$meta]);
     }
+
+    public function Page6()
+    {
+        return Inertia::render('Page6');
+    }
+
+    public function Page7()
+    {
+        return Inertia::render('Page7');
+    }
+
+    public function Page8()
+    {
+        return Inertia::render('Page8');
+    }
+
+    public function Page9()
+    {
+        return Inertia::render('scroll/Page9');
+    }
+
+    public function Page10()
+    {
+        return Inertia::render('scroll/Page10');
+    }
+
+    public function Page11()
+    {
+        return Inertia::render('Page11');
+    }
+
+    public function Page12()
+    {
+        return Inertia::render('Page12');
+    }
 }
