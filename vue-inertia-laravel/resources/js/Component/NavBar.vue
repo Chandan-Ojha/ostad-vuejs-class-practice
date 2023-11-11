@@ -47,9 +47,7 @@ import { Link } from "@inertiajs/vue3";
                         <Link class="nav-link" href="/Page8">Page8</Link>
                     </li>
                     <li class="nav-item">
-                        <Link class="nav-link" href="/Page9" preserve-scroll>
-                            Page9
-                        </Link>
+                        <Link class="nav-link" href="/Page9"> Page9 </Link>
                     </li>
                     <li class="nav-item">
                         <Link class="nav-link" href="/Page10" preserve-scroll>

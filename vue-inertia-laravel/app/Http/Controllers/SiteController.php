@@ -89,6 +89,11 @@ class SiteController extends Controller
         return Inertia::render('Page8');
     }
 
+    function PostBackForError()
+    {
+        return redirect()->route('Page000');
+    }
+
     public function Page9()
     {
         return Inertia::render('scroll/Page9');

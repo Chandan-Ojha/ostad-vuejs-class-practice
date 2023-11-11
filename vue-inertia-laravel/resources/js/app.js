@@ -17,5 +17,32 @@ createInertiaApp({
     },
 });
 
+// Appear @ Before Route
+
+/* router.on("before", (event) => {
+    if (!confirm("Are you sure you want to navigate away?")) {
+        event.preventDefault();
+    }
+}); */
+
 router.on("start", () => NProgress.start());
+
+// Pass Invalid Params like Inertia::render('Page8',$invalid_variable) to see this
+
+/* router.on("invalid", (event) => {
+    console.log(`An invalid Inertia response was received.`);
+    console.log("Response: ", event.detail.response);
+}); */
+
+// Shutdown Server To See This Exception
+/*router.on('exception', (event) => {
+    console.log(`An unexpected error occurred during an Inertia visit.`)
+    console.log(event.detail.error)
+})*/
+
+// Appear @ Current Navigation
+/*router.on("navigate", (event) => {
+    console.log(`Navigated to ${event.detail.page.url}`);
+});*/
+
 router.on("finish", () => NProgress.done());
