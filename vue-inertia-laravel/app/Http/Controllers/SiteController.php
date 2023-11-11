@@ -121,6 +121,17 @@ class SiteController extends Controller
         return Inertia::render('Page11');
     }
 
+    function PostBackRequestFromLink(Request $request){
+        $JsonObject= $request->input();
+        $data = [
+            'message'=>'Submit Success',
+            'status' => true,
+            'shared_data'=>$JsonObject
+        ];
+
+        return redirect()->route('Page11')->with($data);
+    }
+
     public function Page12()
     {
         return Inertia::render('Page12');
