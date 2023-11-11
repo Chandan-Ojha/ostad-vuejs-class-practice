@@ -31,4 +31,6 @@ Route::get('/Page12', [SiteController::class, 'Page12'])->name('Page12');
 
 Route::post('/PostBackRequest', [SiteController::class, 'PostBackRequest'])->name('PostBackRequest');
 Route::post('/PostBackForError', [SiteController::class,'PostBackForError'])->name('PostBackForError');
+Route::post('/PostBackRequestFromLink', [SiteController::class,'PostBackRequestFromLink'])->name('PostBackRequestFromLink');
 
+Route::post('/UploadRequest', [SiteController::class,'UploadRequest'])->name('UploadRequest');

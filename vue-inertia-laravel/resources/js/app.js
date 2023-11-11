@@ -45,4 +45,9 @@ router.on("start", () => NProgress.start());
     console.log(`Navigated to ${event.detail.page.url}`);
 });*/
 
+// Appear @ File Upload Case
+router.on("progress", (event) => {
+    console.log(`Loading: ${event.detail.progress.percentage}%`);
+});
+
 router.on("finish", () => NProgress.done());

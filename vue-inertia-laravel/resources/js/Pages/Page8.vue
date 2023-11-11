@@ -3,6 +3,7 @@ import { usePage } from "@inertiajs/vue3";
 import { useForm } from "@inertiajs/vue3";
 import NavBar from "@/Component/NavBar.vue";
 const page = usePage();
+document.title = "Page 8";
 const form = useForm({ first_name: "", last_name: "", email: "" });
 
 function submit() {

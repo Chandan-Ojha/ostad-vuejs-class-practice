@@ -79,6 +79,18 @@ class SiteController extends Controller
         return Inertia::render('Page6');
     }
 
+    function UploadRequest(Request $request){
+
+        $img=$request->file('image_file');
+        $img->move(public_path('uploads'), $img->getClientOriginalName());
+        $data = [
+            'message'=>'Submit Success !',
+            'status' => true,
+            'shared_data'=> $img->getClientOriginalName(),
+        ];
+        return redirect()->route('Page6')->with($data);
+    }
+
     public function Page7()
     {
         return Inertia::render('Page7');
